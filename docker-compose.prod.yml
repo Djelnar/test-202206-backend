@@ -22,3 +22,9 @@ services:
     volumes:
       - ./src:/usr/src/app/src
       - ./migrations:/usr/src/app/migrations
+  frontend:
+    image: djelnar/nozomi-test
+    ports:
+      - '3000:3000'
+    links:
+      - backend
